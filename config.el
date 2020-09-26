@@ -58,6 +58,10 @@
 
 ;; Show trailing whitespace
 (setq-default show-trailing-whitespace t)
+(add-hook 'minibuffer-setup-hook (lambda() (setq show-trailing-whitespace nil)))
+(add-hook 'inferior-python-mode-hook (lambda() (setq show-trailing-whitespace nil)))
+(add-hook 'comint-mode-hook (lambda() (setq show-trailing-whitespace nil)))
+(add-hook 'compilation-mode-hook (lambda () (setq show-trailing-whitespace nil)))
 
 ;; Ctrl-C, Ctrl-V
 (cua-mode +1)
