@@ -65,6 +65,9 @@
 ;; No confirmation when quitting
 (setq confirm-kill-emacs nil)
 
+;; Remove unnecessary Doom Emacs string from frame title
+(setq frame-title-format "%b")
+
 (after! evil
   ;; Make underscores part of a word
   (add-hook! 'python-mode-hook (modify-syntax-entry ?_ "w"))
