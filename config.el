@@ -83,3 +83,9 @@
   ;; Make asterisk not include \\<...\\>
   (define-key evil-normal-state-map (kbd "*") 'evil-ex-search-unbounded-word-forward)
   )
+
+(after! ivy
+  ;; Adds recent files to buffer list
+  (setq ivy-use-virtual-buffers t)
+  ;; Configure display of number of options
+  (setq ivy-count-format "(%d/%d) "))
