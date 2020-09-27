@@ -72,6 +72,9 @@
 ;; Remove unnecessary Doom Emacs string from frame title
 (setq frame-title-format "%b")
 
+;; Let avy find matches across windows
+(setq avy-all-windows t)
+
 (after! evil
   ;; Make underscores part of a word
   (add-hook! 'python-mode-hook (modify-syntax-entry ?_ "w"))
