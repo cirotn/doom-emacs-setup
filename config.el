@@ -74,6 +74,9 @@
       '((:eval (if (buffer-file-name)
                    (abbreviate-file-name (buffer-file-name)) "%b"))))
 
+;; Use cygwin find rather than Windows find
+(if (string-equal system-type "windows-nt") (setq find-program "C:\\cygwin\\bin\\find.exe"))
+
 ;; Let avy find matches across windows
 (setq avy-all-windows t)
 
