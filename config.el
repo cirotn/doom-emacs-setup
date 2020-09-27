@@ -69,8 +69,10 @@
 ;; No confirmation when quitting
 (setq confirm-kill-emacs nil)
 
-;; Remove unnecessary Doom Emacs string from frame title
-(setq frame-title-format "%b")
+;; Make frame title the full file path
+(setq frame-title-format
+      '((:eval (if (buffer-file-name)
+                   (abbreviate-file-name (buffer-file-name)) "%b"))))
 
 ;; Let avy find matches across windows
 (setq avy-all-windows t)
