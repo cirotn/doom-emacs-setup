@@ -99,3 +99,7 @@
   (setq ivy-use-virtual-buffers t)
   ;; Configure display of number of options
   (setq ivy-count-format "(%d/%d) "))
+
+(after! clang-format
+  (setq clang-format-executable "clang-format-6.0")
+  )
