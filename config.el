@@ -88,6 +88,7 @@
   (add-hook! 'c++-mode-hook (modify-syntax-entry ?_ "w"))
   (add-hook! 'c-mode-hook (modify-syntax-entry ?_ "w"))
   (add-hook! 'makefile-mode-hook (modify-syntax-entry ?_ "w"))
+  (add-hook! 'rustic-mode-hook (modify-syntax-entry ?_ "w"))
   ;; Make hyphen part of a word in lisp
   (add-hook! 'emacs-lisp-mode-hook (modify-syntax-entry ?- "w"))
   ;; Make asterisk not include \\<...\\>
