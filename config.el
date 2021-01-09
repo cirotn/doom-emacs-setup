@@ -82,6 +82,9 @@
 ;; Let avy find matches across windows
 (setq avy-all-windows t)
 
+;; Disable smartparens
+(remove-hook 'doom-first-buffer-hook #'smartparens-global-mode)
+
 (after! evil
   ;; Make underscores part of a word
   (add-hook! 'python-mode-hook (modify-syntax-entry ?_ "w"))
