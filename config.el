@@ -85,6 +85,10 @@
 ;; Disable smartparens
 (remove-hook 'doom-first-buffer-hook #'smartparens-global-mode)
 
+;; Set c++-style
+(setq c-default-style "bsd" c-basic-offset 4)
+(setq c-syntactic-indentation nil)
+
 (after! evil
   ;; Make underscores part of a word
   (add-hook! 'python-mode-hook (modify-syntax-entry ?_ "w"))
