@@ -112,3 +112,12 @@
 (after! clang-format
   (setq clang-format-executable "clang-format-6.0")
   )
+
+(use-package! python-black
+  :demand t
+  :after python)
+(add-hook! 'python-mode-hook #'python-black-on-save-mode)
+
+(map! :leader :desc "Blacken Buffer" "m b b" #'python-black-buffer)
+(map! :leader :desc "Blacken Region" "m b r" #'python-black-region)
+(map! :leader :desc "Blacken Statement" "m b s" #'python-black-statement)
